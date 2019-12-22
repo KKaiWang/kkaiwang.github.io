@@ -4,12 +4,11 @@
 
 == 2019
 - K. Wang, Y. Jiang, J. Oravec, M.E. Villanueva, B. Houska.\n
-Parallel explicit tube model predictive control. \[[https://arxiv.org/abs/1910.03271 Link]\] \[[papers/CDC2019_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2019.html Bibtex]\]\n
-In Proceedings of the 58th IEEE Conference on Decision and Control (CDC),\n
-Nice, France, December, 2019.
+[https://arxiv.org/abs/1910.03271 Parallel explicit tube model predictive control.] \[[papers/CDC2019_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2019.html Bibtex]\]\n
+In Proceedings of the 58th IEEE Conference on Decision and Control (CDC), Nice, France, December, 2019.
 
 - J. Su, Y. Zha, K. Wang, M.E. Villanueva, R. Paulen, B. Houska.\n
-Interval Superposition Arithmetic for Guaranteed Parameter Estimation. \[[https://www.sciencedirect.com/science/article/pii/S2405896319302101 Link]\] \[[Bibtex\IFAC_Su2019.html Bibtex]\]\n
+[https://www.sciencedirect.com/science/article/pii/S2405896319302101 Interval Superposition Arithmetic for Guaranteed Parameter Estimation.] \[[Bibtex\IFAC_Su2019.html Bibtex]\]\n
 In Proceedings of the 12th IFAC Symposium on Dynamics and Control of Process Systems, Florianopolis, Brazil, April, 2019.
 
 
