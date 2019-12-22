@@ -1,0 +1,168 @@
+---
+title: "Law of Large Numebers, Central Limit Theorem, and Monte Carlo"
+author: "GAO Zheng"
+date: "March 10, 2017"
+output:
+  html_document: 
+    css: "~/Teaching/width.css"
+  html_notebook: default
+---
+
+This a quick introduction into simulation concepts with illustration in R, to aid with your 3rd project.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Often a methodology that we dream up (be it a statistical procedure, eningeering design, internet routing protocol, etc.) is intractible to analytical evaluation due to the complexity of the system that it operates on. Physical experiments are sometimes prohibitive too, either due to financial or ethical reasons. In such cases computer simulations allow us to glimpse into the performances of the methods that we came up with. The idea is simple: if we can simulate the evironment in which the methodology operates realistically, we can, by running computer simulations, obtain equally realistic performances by simulation.
+
+#### What is Monte Carlo Simulation?  [^1]
+
+The Monte Carlo method was invented by scientists working on the atomic bomb in the 1940s, who named it for the city in Monaco famed for its casinos and games of chance.  Its core idea is to use random samples of parameters or inputs to explore the behavior of a complex system or process.  The scientists faced physics problems, such as models of neutron diffusion, that were too complex for an analytical solution -- so they had to be evaluated numerically.  They had access to one of the earliest computers -- MANIAC -- but their models involved so many dimensions that exhaustive numerical evaluation was prohibitively slow.  Monte Carlo simulation proved to be surprisingly effective at finding solutions to these problems.  Since that time, Monte Carlo methods have been applied to an incredibly diverse range of problems in science,
+engineering, and finance -- and business applications in virtually every industry.
+
+[^1]: http://www.solver.com/monte-carlo-simulation-overview
+
+Let us first arm ourselves with some tools to understand simulation.
+
+## Law of Large Numbers
+
+If we have independent and identically distributed samples $X_1,\dots,X_n$, where each $X_i\sim F$, then the sample average $\bar{X_n}=\frac{1}{n}\sum_{i=1}^{n}X_i$ converges to the true mean $\mu$ of $F$.
+
+Formally,
+
+$$
+\bar{X_n} \to \mu
+$$
+as $n$ goes to infinity.
+
+This is saying that as our sample accumulates, the sample average as an estimate of the true mean gets better and better.
+
+Similarly sample variance is a consistent estimate of true variance
+
+$$
+\hat{\sigma^2} \to \sigma^2
+$$
+
+Implication: if we wish to estimate the average performance of a procedure, we can simulate independently generated senarios (price movements), and evaluate the procedure under each senario, then take the average of the performances to evaluate the true mean, take the sample variance to estimate the true variance.
+
+## Sampling from Distibutions
+
+R has virtually every distrution implemented for you to readily sample from. We will go through a common list of them and illustrate their usage in R.
+
+A list of common continuous distributions and the function call to sample from them are:
+
+- Normal: `rnorm`
+- Exponential: `rexp`
+- Gamma: `rgamma`
+- Beta: `rbeta`
+- Lognormal: there is no built-in function, but you can exponentiate a normal random variable `exp(rnorm)`
+- Pareto: the function resides in `rmutil` pacakge, `rmutil::rpareto`
+- Uniform: `runif`
+- Weibull: `rweibull`
+
+Some common discrete distributions are:
+
+- Binomial: `rbinom`
+- Bernoulli: as a special case of binomial with only one trial, `rbinom(n,1,p)`
+- Discrete Uniform: `sample`
+- Geometric: `rgeom`
+- Negative Binomial: `rnbinom`
+- Poisson: `rpois`
+
+
+## What to report from your simulation?
+
+After you have done your simulation and collected a number of samples (returns of your portfolio) for each of your strategies, how should you evaluate them and what should your report?
+
+The sample averages and standard deviations are of course two very important measures of your results, but they are not all there is to your strategy. As we have discussed in class, several other measrues (VaR, CVaR, etc.) may also be of interest. 
+
+You might also want to look at the distribution of the sample to get an idea of the performance and any special features that shows up. The distribution captures a lot more than just the mean and variances. For example an investor may be particularly interested in the skewness of the returns.
+
+You can try to plot a histogram of the sample, or slightly differently, plot the empirical distribution defined in the following example.
+
+### Example 1
+
+We write a function which calculates the empirical distribution function of $X_1,\cdots,X_n\stackrel{\text{iid}}{\sim}N(0,1)$. The empirical distribution function is defined as
+$$
+\Phi_n(x) = \frac{1}{n}\sum_{i=1}^nI(X_i\leq x)
+$$
+where $I(X\leq x)$ is an indicator function, taking value 1 if $X\leq x$ and 0 otherwise. Plot this function for $x\in[-4,4]$. Let $n=5, 50, 500$ respectively and plot all three empirical CDF's on the same figure, with the true standard Normal cdf superimposed for comparison.
+
+```{r}
+Phi.n <- function(m,xseq){
+	# xseq can be either a scalar or a vector
+	X <- rgamma(m,shape = 2, rate = 1)
+	Phi.n.x <- sapply(xseq, function(x){mean(X<x)})
+	return(Phi.n.x)
+}
+n <- c(5,50,500)
+xseq <- seq(-1,8, by = 0.01)
+plot(0, xlim=c(-1,8), ylim=c(0,1), xlab="x", ylab="Phi.n(x)",
+     main="Empirical CDF", type='n')
+for (i in 1:length(n)){
+	par(new=T)
+	plot(xseq, Phi.n(n[i],xseq), col=i, axes=F, type="l", xlim=c(-1,8),
+	     ylim=c(0,1), xlab="",ylab="")
+}
+lines(xseq,pgamma(xseq,shape = 2, rate = 1), col=4, lty=3, lwd=2)
+legend("topleft", legend=c(paste(n,'points'), 'Gamma cdf'),
+       col=1:4, lty=c(1,1,1,3))
+```
+
+**Remark**: here for all $x$, the value $\Phi_n(x)$ is approaching the Gamma cdf. Why does this happen? Recall the Law of Large Numbers: for any fixed $x$, $\Phi_m(x)$ is the mean of $n$ independent identically distributed random variables $I(X_i\leq x)$, therefore it will converge to the expectation $E(I(X_1\leq x))=P(X_{1}\leq x)$, which is the true cdf.
+
+In other words, the empirical cdf converges point-wise to the true cdf by law of large numbers, and you can report the empirical distribution of the sample you obtained from your simulation, expeting it to be close to the true distribution of the return of your strategy.
+
+## Central Limit Theorem
+
+The LLN, magical as it is, does not tell us the rate at which the convergence takes place. How large does your sample need to be in order for your estimates to be close to the truth? Central Limit Theorem provides such a characterization, and more:
+
+$$
+\sqrt{n}(\bar{X_n}-\mu) \stackrel{\text{d}}{\to}\mathrm{N}(0,\sigma^2)
+$$
+
+where $\sigma^2$ is the population variance of the common distribution $F$.
+
+This is saying that taking average of random samples is shrinking the standard deviation at a rate of $\frac{1}{\sqrt{n}}$, or equivalently, shrinking the variance and a rate of $\frac{1}{n}$, and the ditribution of sample average is roughly normal when $n$ is large.
+
+Therefore major benefits comes at smaller sample sizes to moderate sample sizes; going from 100 to 200 samples brings more improvements to your estimates than going from 1000 to 1100 samples.
+
+## Example 2 [^2]
+
+If an investor is looking to analyze the average return for a stock index made up of 1,000 stocks, he can take random samples of stocks from the index to get an estimate for the return of the total index. If we take a random sample of 30 stocks, covering a broad range of stocks across industries and sectors, the average returns from these samples approximates the return for the whole index and are approximately normally distributed. The approximation holds even if the actual returns for the individual stocks are not normally distributed.
+
+[^2]: http://www.investopedia.com/terms/c/central_limit_theorem.asp
+
+Going from 10 to 30 stocks greatly improves your ability to track the index, but going from 500 to 510, although still brings benefits, does less.
+
+## Dealing with stock data
+
+Here's the sample pre-processing steps for the MSFT taken from Yahoo finance.
+
+```{r}
+MSFT <- read.csv(file = "../data/MSFT.csv")
+dates <- rev(MSFT$Date)
+prices <- rev(MSFT$Adj.Close)
+returns <- prices[2:length(prices)] / prices[1:(length(prices)-1)]
+logreturns <- log(returns)
+plot(logreturns, type = 'l')
+```
+
+Let's look at the auto correlation function of the series of lags up to 180 days.
+
+```{r}
+par(mar = c(4,4,1,1))
+acf(logreturns, lag.max = 180)
+```
+
+There is virtually no sample auto correlation in the series! Indicating that there is no patterns of consecutive ups or downs in the prices in this stock. (What's the implication of any trend-following type of strategy?)
+
+However we do observe some volatility clustering in the series: there are three periods where the variance in the series seems higher than the rest of the times. You do not have to be concerned with this type of behavior in the modelling of the stock returns for now.
+
+## More on Monte Carlo and testing strategies
+
+- How to backtest using historical data?
+
+- Your strategy?

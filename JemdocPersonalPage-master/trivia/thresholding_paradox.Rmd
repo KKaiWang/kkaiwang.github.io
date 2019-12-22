@@ -1,0 +1,51 @@
+---
+title: "Sub-optimality of thresholding"
+author: "GAO Zheng"
+date: "Dec 6, 2018"
+output: html_notebook
+---
+
+This is an excerpt from our paper [Fundamental Limits of Exact Support Recovery in High Dimensions](https://arxiv.org/abs/1811.05124).
+
+Consider the generic problem of locating the non-zero components of a high-dimensional vector $\mu\in \mathbb{R}^p$ when observed with noise $\epsilon\in \mathbb{R}^p$:
+$$
+x = \mu + \epsilon
+$$
+Let the errors have generalized Gaussian density with $\nu=1/2$, i.e., $\log{f_0(x)}\propto -x^{1/2}$. 
+Let dimension $p=2$, sparsity $s=1$ with uniform prior, and signal size $\delta=1$.
+That is, $\mathbb P[\mu = (0,1)^\mathrm{T}] = \mathbb P[\mu = (1,0)^\mathrm{T}] = 1/2$.
+
+If the observations take on values $x = (x_1, x_2)^\mathrm{T} = (1,2)^\mathrm{T}$, we see from a comparison of the likelihoods (and hence, the posteriors),
+$$
+\log \frac{f(x|\{1\})}{f(x|\{2\})} = 2x_1^{1/2} + 2(x_2 - 1)^{1/2} - 2x_2^{1/2} - 2(x_1 - 1)^{1/2} = 4 - 2\sqrt{2} > 0,
+$$
+that even though $x_1<x_2$, the set $\{1\}$ is a better estimate of support than $\{2\}$, i.e., $\mathbb P[S=\{1\}\,\big|\,x] > \mathbb P[S=\{2\}\,\big|\,x]$.
+
+
+### We have arrived at the strange conclusion that a smaller observation should contain the signal instead of the larger one.
+#### (This is indeed a general phenomema when errors have non-logconcave densities.)
+
+
+It should be remarked that the above is true when we assume the existence and knowledge of a maximum signal size $\delta$. 
+When maximum signal sizes are unknown a priori, a large observation may be attributed to either a truly large signal, or to the error.
+Common practice has been to attribute large observations to signals, and not errors.
+
+As an example, consider the linear regression
+$$
+ Y = X\mu + \xi,
+$$
+where $\mu$ is a vector of regression coefficients of interest to be inferred from observations of $X$ and $Y$.
+If the design matrix $X$ is of full column rank, then the OLS estimator of $\mu$ can be formed 
+$$
+    \widehat{\mu} = \left(X'X\right)^{-1}X'Y = \mu + \epsilon,
+$$
+where $\epsilon := (X'X)^{-1}X'\xi$.
+Hence we recover the generic problem. 
+The support recovery problem is therefore equivalent to the fundamental model selection problem.
+Often an investigator calculates the t-scores of each coefficient as 
+$$
+    \widehat{\mu}(j) \Big/ \widehat{\mathrm{s.e.}}(\widehat{\mu}(j)),
+$$
+where $\widehat{\mathrm{s.e.}}(\widehat{\mu}(j))$ is the estimated standard error of $\widehat{\mu}(j)$.
+The investigator then chooses indices with large t-scores to enter the model.
+If the errors in regression model are iid Gaussian, the last expression is t-distributed and have power-law tails; the discussion above suggests that this commonplace procedure may be sub-optimal for bounded signals.

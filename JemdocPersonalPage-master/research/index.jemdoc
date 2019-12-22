@@ -1,0 +1,66 @@
+# jemdoc: menu{MENU}{research/index.html}{../}
+# jemdoc: addcss{../jemdoc.css}
+= Research
+
+I am driven by real data problems, and develop theories (if they are relevant), software (if they are useful), and new methods (only when necessary).
+
+Applications in cybersecurity and genetics have led me to study high-dimensional statistics, large-scale multiple testing, extremes values, and algorithms on data streams. 
+
+
+= Papers and preprints
+
+
+- /Fundamental Limits of Exact Support Recovery in High Dimensions/ 
+\n *ZG*, Stilian Stoev. 
+\n Revision submitted to Bernoulli \[[papers/FLESR_arXiv.pdf pdf]\]\[[https://arxiv.org/abs/1811.05124 arXiv]\]
+\n - Best Student Paper at \[[https://web.math.pmf.unizg.hr/eva2019/competitions-1/best-student-paper Extreme Value Analysis (EVA) 2019]\].
+
+
+- /U-PASS: Unified Power Analysis and Forensics for Qualitative Traits in Genetic Association Studies/ 
+\n *ZG*, Jonathan Terhorst, Cristopher Van Hout, Stilian Stoev .
+\n Bioinformatics (in press) \[[https://power.stat.lsa.umich.edu/u-pass/ interactive software application]\] 
+\[[https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btz637/5545977 advance access]\]
+\n A related set of slides \[[papers/conditioning_in_association_tests.pdf on ancillarity, conditioning, and association tests]\]. 
+
+
+- /Five Shades of Grey, a.k.a. Phase Transitions in High-dimensional Multiple Testing/
+\n *ZG*
+\n Submitted to Annals of Statistics. \[[https://arxiv.org/abs/1910.05701 arXiv]\]
+\n - 1st place in the poster competition at \[[https://sites.lsa.umich.edu/stats-50th-anniversary/ Symposium for the 50-year Anniversary of the Department of Statistics at UM]\].
+
+
+- /On the Rate of Concentration of Maxima in Gaussian Arrays/
+\n Rafail Kartsioukas, *ZG*, Stilian Stoev.
+\n Submitted.  \[[https://arxiv.org/abs/1910.04259 arXiv]\]
+
+
+~~~
+{}{img_left}{felix.gif}{}{100}{}{}
+~~~
+
+
+- /Detection and Identification of Sparse Anomalies in High-dimensional Data Streams/
+\n *ZG*, Stilian Stoev, Michalis Kallitsis. 
+\n In preparation.
+
+
+#- /All-packet MONintoring at ISP-scale and Online Statistical Anomaly Detection in Fast Network Streams/
+#\n *ZG*, Rajat Tandon, Michalis Kallitsis, Stilian Stoev. 
+#\n Submitted to IEEE INFOCOM.
+
+
+- /Fast Online Low-Rank Tensor Decomposition/
+\n *ZG*, Ruofei Zhao.
+\n In preparation.
+
+
+
+
+== Prior to 2015
+
+- /The distribution of incubation and relapse times in experimental human infections with the malaria parasite Plasmodium vivax/
+\n Andrew A Lover, Xiahong Zhao, *ZG*, Richard J. Coker, and Alex R. Cook.
+\n BMC Infectious Diseases 2014 14:539. \[[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4287165/ link]\]
+
+
+# - [papers/FYP_Thesis.pdf Undergraduate thesis]

@@ -1,0 +1,82 @@
+# jemdoc: menu{MENU}{personal/index.html}{../}
+# jemdoc: addcss{../jemdoc.css}
+= Personal
+
+- [https://www.youtube.com/watch?v=c7h_qXuDAeU NUS Choir].
+- HFLS
+
+#[https://www.youtube.com/watch?v=fp9KsTXg7-I NUS Choir]. 
+
+== Datathon
+
+- 1st place in the [https://lsa.umich.edu/stats/news-events/all-news/graduatenews/Michigan-Datathon.html Michigan Datathon], organized by Citadel and Citadel Securities, in partnership with CorrelationOne (Nov - Dec 2017).
+My teammates: [http://www-personal.umich.edu/~rfzhao/ Ruofei Zhao], Kevin Zheng, You Wu.
+
+== EDA
+
+- Some data projects.
+[https://Pill-gz.github.io See here] (deprecated)
+
+#- ggplot is so aesthetically unpleasing that I cringe when I see people use it.
+
+
+== Links
+
+- [https://www.r-project.org/conferences/ useR!]
+- [https://www.gnu.org/philosophy/philosophy.html Use Linux]
+# - [https://github.com/dmlc/mxnet mxnet (I know almost nothing; if you do, teach me)]
+- [https://www.rstudio.com/ Rstudio]
+- [https://plot.ly/ Plotly (amazing interactive plots)]
+- [http://www.mmds.org/ Mining of Massive Datasets] and its [https://lagunita.stanford.edu/courses/course-v1:ComputerScience+MMDS+SelfPaced/info MOOC].
+- [http://accidental-art.tumblr.com/ accidental aRt]
+
+== The Gap by Ira Glass
+
+~~~
+{}{raw}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X2wLP0izeJE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+~~~
+
+# == Academia in a nutshell
+# 
+# ~~~
+# {}{raw}
+# <iframe width="560" height="315" src="https://www.youtube.com/embed/k1tsGGz-Qw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# ~~~
+
+== Quotes
+
+~~~
+"It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove." -- [https://en.wikipedia.org/wiki/Antoine_de_Saint-Exup%C3%A9ry Antoine]
+~~~
+
+~~~
+"It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong." --Richard
+~~~
+
+~~~
+"[https://youtu.be/8L1UngfqojI Rolls and flows of angel hair]" --Joni
+~~~
+
+~~~
+"I have to return some videotapes" --Patrick
+~~~
+
+~~~
+"Get schwifty" --Rick
+~~~
+
+~~~
+"[https://youtu.be/0MIK7bb69xk I wanna go outside]" --Bill
+~~~
+
+~~~
+"You mustn't be afraid to dream a little bigger" --Tom
+~~~
+
+# ~~~
+# {}{img_left}{Scientist.gif}{}{400}{}{}
+# ~~~
+
+
+

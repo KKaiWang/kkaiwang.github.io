@@ -1,0 +1,33 @@
+# jemdoc: menu{MENU}{teaching/teaching.html}{../../}
+# jemdoc: addcss{../../jemdoc.css}
+= Stats 414 |  Topics in Statistics | Winter 2017
+
+* Class from 3 - 5 pm Friday
+
+* Room: B760EH
+
+Contact me by email at [gaozheng@umich.edu]
+
+
+- *[R-intro/Stats414_R-intro.html Topic 1: A gentle introduction to R]*
+   -- [R-intro/Stats414_R-intro_ex1.nb.html - exercise 1] [R-intro/Stats414_R-intro_ex2.nb.html - exercise 2] [R-intro/Stats414_R-intro_ex3.nb.html - exercise 3]
+
+- *[PCA/PCA.html Topic 2: A tutorial on Principal Component Analysis]*
+   -- [PCA/PCA_derivations.html Supplementary: Deriving Principal Components]
+
+- *[Simulation/simulation.html Topic 3: Simulation: LLN, CLT, MC, and Testing Strategies]*
+
+- *[LogisticReg/LogisticReg.html Topic 4: (Part 1) Logistic Regression, Model Selestion, and Cross Validation]*
+
+- *[LogisticReg/Trees.html Topic 4: (Part 2) Classification Trees and Boosting]*
+
+
+== Some links to related resources
+
+~~~
+[https://www.r-project.org/ R] and [https://www.rstudio.com/ Rstudio]
+
+[https://plot.ly Plotly] (interactive plots)
+~~~
+
+

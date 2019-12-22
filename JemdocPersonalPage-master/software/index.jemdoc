@@ -1,0 +1,34 @@
+# jemdoc: menu{MENU}{software/index.html}{../}
+# jemdoc: addcss{../jemdoc.css}
+= Software
+
+== [https://power.stat.lsa.umich.edu/u-pass/ U-PASS]
+
+U-PASS is a web-based R Shiny application that enables unified power analysis of association studies,
+such as genome-wide association tests (GWAS).
+It performs
+
+ - Model-invariant, test-indenpendent power anlaysis of association tests
+ - Systematic review of reported findings in the genetics literature
+
+The application is hosted at [https://power.stat.lsa.umich.edu/u-pass/], 
+and on [obsidian.stat.lsa.umich.edu/gaozheng/Power/ a back-up server],
+and on [https://pill-gz.shinyapps.io/U-PASS/ ShinyApps.io] with limited uptime quota.
+
+
+link to the repo on Github: [https://github.com/Pill-GZ/U-PASS]
+
+~~~
+{}{img_left}{interactive.gif}{}{600}{}{}
+~~~
+
+
+== Covariate-assisted Spectral Clustering
+
+Hyesun, Yura and I implemented the algorithm described in Norbert Binkiewicz's [https://arxiv.org/abs/1411.2158 Covariate-assisted Spectral Clustering (2016)] in the form of an R (Rcpp) package.
+
+ - The original authors' implementation, although still available at Github, is not producing correct results (Dec 2016). 
+ - Our version runs 30 times faster.
+
+link to the repo on Github: [https://github.com/Pill-GZ/CASC]
+

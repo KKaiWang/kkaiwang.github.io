@@ -1,0 +1,39 @@
+# jemdoc: menu{MENU}{consulting/index.html}{../}
+# jemdoc: addcss{../jemdoc.css}
+= CSCAR
+
+You can seek help from [http://cscar.research.umich.edu/ Consulting for Statistics, Computing and Analytics Research (CSCAR)]
+
+= FAQ
+
+- Longitudinal study \/ mixed effects modeling \/ correlated error \/ repeated measurements in R: [https://cran.r-project.org/web/packages/lme4/ lme4::lmer], [https://cran.r-project.org/web/packages/lme4/ lme4::glmer], [https://cran.r-project.org/web/packages/lmerTest/index.html lmerTest::].
+
+- Multiple tests \/ post-hoc tests in R \/ Tukey's test in ANOVA, ANCOVA): [https://www.rdocumentation.org/packages/stats/versions/3.4.3/topics/TukeyHSD stats::TukeyHSD], [https://cran.r-project.org/web/packages/multcomp/ multcomp::glht].
+
+- Post-hoc test in mixed-effects models: [https://cran.r-project.org/web/packages/lsmeans/vignettes/using-lsmeans.pdf lsmeans:lsmeans].
+
+- Change reference category of a factor in R: [https://www.rdocumentation.org/packages/stats/versions/3.4.3/topics/relevel stats::relevel]
+
+= Miscellaneous 
+
+Some small side projects from clients
+
+- Automating nurse workload balancing at U of Michigan Hospital. 
+For 3 shifts a day nurses will be assigned patients to care for; each patient carries an expected workload calculated by his conditions and treatment. Nurses working the same shift (except those who straddle two hospital wings, and/or work multiple shifts) are expected to have similar workload. See example data files ([./patient-nurse_assignment/NurseAssignments-Mar6-day.xlsx work schedule], [./patient-nurse_assignment/NurseInfo.xlsx nurse info]) and [./patient-nurse_assignment/patient_assignment.R R-script].
+
+- Sending POST reqests, parsing JSON responses, and formating data (from the LobbyView database) using R ([./LobbyView_POST_request/lobbyview_data_retrieval.R script]), and Python ([./LobbyView_POST_request/lobbyview_data_retrieval.py script]).
+
+- A small tool for finding most time-slots coverage using gathered responses from Google Forms, since Google Forms does not provide this function. See [./most_time_coverage/SquashClubInitialFormMar6.xlsx example data file] and [./most_time_coverage/getPracticeTimes.R script]
+
+= Bugs
+
+- If you ever see an error like the following when installing a package in R, it's because the list of packages on the RStudio mirror is not well-maintained. A newer version is available for download but the list is apparantly outdated. Just use another mirror.
+~~~
+{}{R}
+trying URL 'https://cran.rstudio.com/src/contrib/pillar_1.1.0.tar.gz'
+Warning in install.packages :
+  cannot open URL 'https://cran.rstudio.com/src/contrib/pillar_1.1.0.tar.gz':
+ HTTP status was '404 Not Found'
+~~~
+
+

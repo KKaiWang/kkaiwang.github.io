@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MassEffectTriology>
+	
+	<game name="MassEffect1">
+		(Under Construction)
+		<characters>
+			<person>Shepard</person>
+			<person>Garrus</person>
+			<person>Kaidan</person>
+			<person>Ashley</person>
+			<person>Liara</person>
+			<person>Tali</person>
+		</characters>
+		<locations>
+			<place>The Citadel</place>
+			<place>Eden Prime</place>
+			<place>Feros</place>
+			<place>Noveria</place>
+			<place>Virmire</place>
+		</locations>
+	</game>
+	
+	<game name="MassEffect2">
+		(Under Construction)
+		<characters>
+			<person>Shepard</person>
+			<person>Garrus</person>
+			<person>Grunt</person>
+			<person>Mordin</person>
+			<person>Miranda</person>
+			<person>Jacob</person>
+			<person>Legion</person>
+			<person>Tali</person>
+		</characters>
+		<locations>
+			<place>The Citadel</place>
+			<place>Omega</place>
+			<place>Illium</place>
+			<place>Horizon</place>
+			<place>Collector Cruise</place>
+			<place>Derelict Reaper</place>
+			<place>Collector Base</place>
+		</locations>
+	</game>
+	
+	<game name="MassEffect3">
+		(Under Construction)
+		<characters>
+			<person>Shepard</person>
+			<person>Javik</person>
+			<person>Liara</person>
+			<person>Garrus</person>
+			<person>EDI</person>
+			<person>James</person>
+		</characters>
+		<locations />
+	</game>
+	
+</MassEffectTriology>

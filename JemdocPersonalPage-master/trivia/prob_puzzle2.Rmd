@@ -1,0 +1,47 @@
+---
+title: "Another puzzle I couldn't solve during an interview"
+author: "Zheng Gao"
+date: "10/30/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question
+
+We are given a round plate, with four switches at positions corresponding to 3, 6, 9, and 12 o'clock of a clock-face.
+Each switch can be ON or  OFF, with a random initial state.
+The system is ON if all switches are ON, or if all switches are off.
+
+The system is covered so you cannot see the states of the switches. 
+However, in a "round", you can reach your hands in for two switches at a time, to feel their states. You can also choose to turn the swithces you reached in for ON/ OFF, as you wish.
+After the "round", the plate is spun around its center to a random position.
+    
+Q: Is there a way to play the game that guarantees that the whole system is turned ON within a finite number of rounds?
+
+## Answer
+
+At first sight this problem seems impossible since the plate is spun after every round.
+
+But of course there is a solution. I got close but couldn't figure out everything in time.
+
+And even though the solution seems pretty ad-hoc, it can derived methodically by thinking backwards (i.e., "what configuration of switch states do I need to arrive at in order to deterministically turn them all ON or  OFF in a finite number of steps?").
+
+    1. Reach for switches at opposite ends of the plate (say, switches at 3 and 9 o'clock), and turn them on.
+    2. Reach for two adjacent switches after the plate is spun (say, switches at 3 and 6 o'clock), and turn them on. Note that they are not necessarily the same switches that are at the 3 and 6 positions in round 1.
+
+Now the system must be either ON, or has exactly 3 switches turned ON (CHECK!).
+
+    3. Reach for switches at opposite ends of the plate again, if one of them is  OFF, turn it ON and we are done. However, if both are ON, turn one of them off.
+    
+If the system is not ON yet, it must have two adjacent switches ON and two adjacent switches  OFF (CHECK!).   
+
+    4. Reach for two adjacent switches again, and if both are  OFF, turn them on; if both are ON, turn them off; if one of them is ON, flip both switches (i.e., ON to  OFF, and  OFF to  ON).
+    
+If the system is not  ON yet, it must have two switches at opposite ends of the plate  ON and the other two switches at opposite ends of the plate off.
+    
+    5.  Choose a pair at opposite ends of the plate and change their states by turning them all OFF/ON, and we are done.
+    
+This solution has at most 5 steps.

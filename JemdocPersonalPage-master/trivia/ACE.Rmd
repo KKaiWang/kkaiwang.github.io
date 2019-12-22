@@ -1,0 +1,68 @@
+---
+title: "Alternating Conditional Expectation"
+author: "GAO Zheng"
+date: "February 7, 2018"
+output: html_notebook
+---
+
+Replicating first example of Breiman and Friedman (1985). I.e., $$Y_i = \exp{\{X_i^3+\epsilon_i\}},$$
+where $X_i^3$ and $\epsilon_i$ are i.i.d. from $N(0,1)$.
+
+
+```{r setup, include=TRUE}
+if (!require("fANCOVA")) {
+  install.packages("fANCOVA")
+  library("fANCOVA")
+}
+
+set.seed(666)
+n <- 200
+x <- runif(n = n, min = -1.5, max = 1.5)
+x3 <- rnorm(n = n, mean = 0, sd = 1)
+x <- ifelse(x3 > 0, yes = x3^(1/3), no = -(-x3)^(1/3))
+epsilon <- rnorm(n = n, mean = 0, sd = 1)
+
+y <- exp(x3 + epsilon)
+
+# plot(x = x, y = log(y))
+
+theta_y <- (y - mean(y)) / sd(y)
+phi_x <- x
+
+plot(x = x, y = theta_y)
+
+for (i in 1:20) {
+  llr <- fANCOVA::loess.as(x, theta_y, degree = 1, 
+                           criterion = "gcv", user.span = NULL, plot = F)
+  phi_x <- llr$fitted
+  
+  llr <- fANCOVA::loess.as(y, phi_x, degree = 1, 
+                           criterion = "gcv", user.span = NULL, plot = F)
+  theta_y <- llr$fitted
+  theta_y <- (theta_y - mean(theta_y)) / sd(theta_y)
+}
+```
+
+
+
+```{r}
+par(mar = c(4,4,1,1))
+plot(x, log(y))
+lines(sort(x), sort(x)^3, col = 1)
+points(x, theta_y, pch = 3, col = 2)
+lines(sort(x), phi_x[order(x)], col = 2)
+legend("topleft", legend = c("log(Yi)", expression(x^3), expression(theta(Y[i])), expression(phi(x))),
+       lty = c(0, 1, 0, 1), pch = c(1, NA, 3, NA), col = c(1, 1, 2, 2), bty = 'n')
+```
+
+```{r}
+plot(y, x3, ylim = c(-3, 5))
+lines(sort(y), log(sort(y)), col = 1)
+points(y, phi_x, pch = 3, col = 2)
+llr <- fANCOVA::loess.as(y, phi_x, degree = 1, criterion = "gcv", user.span = NULL, plot = F)
+theta_y <- llr$fitted
+lines(sort(y), theta_y[order(y)], col = 2)
+legend("bottomright", legend = c(expression(X[i]^3), expression(log(y)), expression(phi(X[i])), expression(theta(y))),
+       lty = c(0, 1, 0, 1), pch = c(1, NA, 3, NA), col = c(1, 1, 2, 2), bty = 'n')
+```
+

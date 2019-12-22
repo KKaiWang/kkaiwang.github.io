@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	
+	<person SocialID="123" SchoolID="92031482">
+		<name>Jim Brown</name>
+		<gender>Male</gender>
+		<major>Mathematics</major>
+		<minor>Statistics</minor>
+	</person>
+	
+	<person SocialID="234" SchoolID="91405720">
+		<name>Susan Leicester</name>
+		<gender>Female</gender>
+		<major>Chemistry</major>
+	</person>
+	
+	<person SocialID="345" SchoolID="95206834" OfficeLocation="194 NQ">
+		<name>Ruben Paul</name>
+		<gender>Male</gender>
+		<major>Physics</major>
+	</person>
+	
+	<person SocialID="105" SchoolID="15928304" OfficeLocation="1480 RB">
+		(Student organization leader in the Department of Physics.)
+		<name>Marion Ma</name>
+		<gender>Female</gender>
+		<major>Physics</major>
+		<minor>Computer Science</minor>
+		<minor>Statistics</minor> <!-- No easy way to access this duplicated tag by its name with basic operations -->
+		<hobby>Biking</hobby>
+	</person>
+	
+</students>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="../../jemdoc.css" type="text/css" />
+<title>Stats 406 |  Statistical Computing | Fall 2016</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="menu-item"><a href="../../index.html">Main</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="../../research/index.html">Papers</a></div>
+<div class="menu-item"><a href="../../trivia/index.html">Trivia</a></div>
+<div class="menu-item"><a href="../../software/index.html">Software</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="../../consulting/index.html">Consulting</a></div>
+<div class="menu-item"><a href="../../teaching/index.html">Teaching</a></div>
+<div class="menu-item"><a href="../../personal/index.html">Personal</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Stats 406 |  Statistical Computing | Fall 2016</h1>
+</div>
+<p>* Lab section: Thursday, 11:30 am - 1:00 pm</p>
+<p>* Room: B760 East Hall</p>
+<p>* Office hours: (Science Learning Center, Chemistry building, attend any)</p>
+<ul>
+<li><p>Tuesday: 10:30 am - 12:00 noon (Gao, Zheng)</p>
+</li>
+<li><p>Wednesday 4:00 pm- 5:30 pm (Liu, Boang)</p>
+</li>
+</ul>
+<p><a href="Stats406Lab1.html">Lab 1: R basics</a></p>
+<p><a href="Stats406Lab2.html">Lab 2: control flow in R</a></p>
+<p><a href="Stats406Lab3.html">Lab 3: data wrangling in R</a></p>
+<p><a href="Stats406Lab4.html">Lab 4: SQL + R</a></p>
+<p><a href="Stats406Lab5.html">Lab 5: XML + R</a></p>
+<p>Lab 6: Review. Refer to Canvas for pdf file.</p>
+<p><a href="Stats406Lab7.html">Lab 7: regular expression + R</a></p>
+<p><a href="Stats406Lab8a.nb.html">Lab 8a: law of large numbers and inverse method</a></p>
+<p><a href="Stats406Lab8b.nb.html">Lab 8b: rejection sampling</a></p>
+<p><a href="Stats406Lab9.nb.html">Lab 9: Monte Carlo integration</a></p>
+<p><a href="Stats406Lab10.nb.html">Lab 10: Importance sampling</a></p>
+<p><a href="Stats406Lab11a.nb.html">Lab 11a: Bayesian Inference</a></p>
+<p><a href="Stats406Lab11b.nb.html">Lab 11b: Bootstrap</a></p>
+<p>Lab 12: Review. Refer to Canvas for pdf file.</p>
+<h2>Some links to related resources (not part of the course)</h2>
+<ul>
+<li><p><a href="http://hadley.nz/">Hadley Wickham</a>'s <a href="http://adv-r.had.co.nz/">Advanced R</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Write R scripts as you would when <a href="http://r-pkgs.had.co.nz/">writing a package</a>. Format, comment, test, and document your code.</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://radfordneal.wordpress.com/about/">Radford Neal</a> explaining <a href="https://radfordneal.wordpress.com/2010/08/19/speeding-up-parentheses-and-lots-more-in-r/">why curly braces was faster than round brackets in R</a>! This is no longer the case after 6 years of updates. The round brackets version now run just as fast as the curly braced ones.</p>
+</li>
+</ul>
+<ul>
+<li><p>A <a href="http://dirk.eddelbuettel.com/blog/2010/09/07/#straight_curly_or_compiled">blogpost</a> by Dirk Eddelbuettel illustrating the speed between straight, curly, or compiled version of the same code. Spoilers: compiled code runs a lot faster. At the time of the post the difference was 80x (!), now (late 2016) the difference between the compiled C++ code and interpreted R statement is around 35x (on my Linux using on an outdated Intel i5-3317U chip).</p>
+</li>
+</ul>
+<ul>
+<li><p>The function &lsquo;which()&rsquo; is unnecessary in most situations. However there are some situations <a href="http://stackoverflow.com/questions/6918657/whats-the-use-of-which">where &lsquo;which()&rsquo; can be useful</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>A tutorial on the R package <a href="https://cran.r-project.org/web/packages/dplyr/index.html">dplyr</a> by Hadley Wickham: <a href="https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html">introduction to dplyr</a> (<a href="./dplyr_tutorial.R">code</a>). There are <a href="http://zevross.com/blog/2014/03/26/four-reasons-why-you-should-check-out-the-r-package-dplyr-3/">several advantages using dplyr</a>: it's fast; code can be shortened; syntax is much more consistent; pipelining (instead of nesting) operations is possible; it <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html">supports databases</a> (so you don't have to write SQL SELECT!). It's a go-to package for data wrangling.</p>
+</li>
+</ul>
+<ul>
+<li><p>a <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">cheat sheet for data wrangling with dplyr and tidyr</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>It's also possible to use <a href="https://github.com/pschloss/make_tutorial">GNU &lsquo;make&rsquo; as a tool for pipelining data analysis</a> by <a href="http://www.schlosslab.org/labbies/schloss.html">Pat Schloss</a>.</p>
+</li>
+</ul>
+<div class="infoblock">
+<div class="blockcontent">
+<p>Rstudio just got updated!</p>
+<p>Rstudio received a major update on Tuesday (1 Nov), with lots of useful new features. See <a href="https://blog.rstudio.org/2016/11/01/announcing-rstudio-v1-0/">Announcing RStudio v1.0!</a>.</p>
+</div></div>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-06-09 17:48:51 EDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

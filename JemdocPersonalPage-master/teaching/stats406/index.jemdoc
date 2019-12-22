@@ -1,0 +1,67 @@
+# jemdoc: menu{MENU}{teaching/teaching.html}{../../}
+# jemdoc: addcss{../../jemdoc.css}
+= Stats 406 |  Statistical Computing | Fall 2016
+
+* Lab section: Thursday, 11:30 am - 1:00 pm
+
+* Room: B760 East Hall
+
+* Office hours: (Science Learning Center, Chemistry building, attend any)
+
+    - Tuesday: 10:30 am - 12:00 noon (Gao, Zheng)
+    - Wednesday 4:00 pm- 5:30 pm (Liu, Boang)
+
+[Stats406Lab1.html Lab 1: R basics]
+
+[Stats406Lab2.html Lab 2: control flow in R]
+
+[Stats406Lab3.html Lab 3: data wrangling in R]
+
+[Stats406Lab4.html Lab 4: SQL + R]
+
+[Stats406Lab5.html Lab 5: XML + R]
+
+Lab 6: Review. Refer to Canvas for pdf file.
+
+[Stats406Lab7.html Lab 7: regular expression + R]
+
+[Stats406Lab8a.nb.html Lab 8a: law of large numbers and inverse method]
+
+[Stats406Lab8b.nb.html Lab 8b: rejection sampling]
+
+[Stats406Lab9.nb.html Lab 9: Monte Carlo integration]
+
+[Stats406Lab10.nb.html Lab 10: Importance sampling]
+
+[Stats406Lab11a.nb.html Lab 11a: Bayesian Inference]
+
+[Stats406Lab11b.nb.html Lab 11b: Bootstrap]
+
+Lab 12: Review. Refer to Canvas for pdf file.
+
+
+== Some links to related resources (not part of the course)
+
+ - [http://hadley.nz/ Hadley Wickham]'s [http://adv-r.had.co.nz/ Advanced R].
+
+ - Write R scripts as you would when [http://r-pkgs.had.co.nz/ writing a package]. Format, comment, test, and document your code.
+
+ - [https://radfordneal.wordpress.com/about/ Radford Neal] explaining [https://radfordneal.wordpress.com/2010/08/19/speeding-up-parentheses-and-lots-more-in-r/ why curly braces was faster than round brackets in R]! This is no longer the case after 6 years of updates. The round brackets version now run just as fast as the curly braced ones.
+
+ - A [http://dirk.eddelbuettel.com/blog/2010/09/07/\#straight_curly_or_compiled blogpost] by Dirk Eddelbuettel illustrating the speed between straight, curly, or compiled version of the same code. Spoilers: compiled code runs a lot faster. At the time of the post the difference was 80x (!), now (late 2016) the difference between the compiled C\+\+ code and interpreted R statement is around 35x (on my Linux using on an outdated Intel i5-3317U chip).
+
+ - The function `which()' is unnecessary in most situations. However there are some situations [http://stackoverflow.com/questions/6918657/whats-the-use-of-which where `which()' can be useful].
+
+ - A tutorial on the R package [https://cran.r-project.org/web/packages/dplyr/index.html dplyr] by Hadley Wickham: [https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html introduction to dplyr] ([./dplyr_tutorial.R code]). There are [http://zevross.com/blog/2014/03/26/four-reasons-why-you-should-check-out-the-r-package-dplyr-3/ several advantages using dplyr]: it's fast; code can be shortened; syntax is much more consistent; pipelining (instead of nesting) operations is possible; it [https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html supports databases] (so you don't have to write SQL SELECT!). It's a go-to package for data wrangling.
+
+ - a [https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf cheat sheet for data wrangling with dplyr and tidyr].
+
+ - It's also possible to use [https://github.com/pschloss/make_tutorial GNU `make' as a tool for pipelining data analysis] by [http://www.schlosslab.org/labbies/schloss.html Pat Schloss].
+
+~~~
+Rstudio just got updated!
+
+Rstudio received a major update on Tuesday (1 Nov), with lots of useful new features. See [https://blog.rstudio.org/2016/11/01/announcing-rstudio-v1-0/ Announcing RStudio v1.0!].
+~~~
+
+

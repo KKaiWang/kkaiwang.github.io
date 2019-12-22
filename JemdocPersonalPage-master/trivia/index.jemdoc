@@ -1,0 +1,65 @@
+# jemdoc: menu{MENU}{trivia/index.html}{../}
+# jemdoc: addcss{../jemdoc.css}
+= Some statistics related things
+== collected here to share and for reference
+
+# == I know some people are using contents in this page without proper citation.
+
+
+== R & Shiny
+
+ - Add a load spinner in Shiny with [https://github.com/andrewsali/shinycssloaders shinycssloaders] in two lines of code. [https://cran.r-project.org/web/packages/shinycssloaders/index.html Package on CRAN] (Mar 2019)
+
+ - Your don't have to know JavaScript to use JavaScript libraries in Shiny. A guide to [http://shiny.rstudio.com/articles/js-build-widget.html htmlwidget]. (Mar 2019)
+
+ - To use output values in a conditionalPanel, you must render it in UI first. See [https://stackoverflow.com/questions/21609436/r-shiny-conditionalpanel-output-value this post]. (Feb 2019)
+
+ - Caching plots in Shiny [https://blog.rstudio.com/2018/11/13/shiny-1-2-0/ is now possible] (though not with Plotly yet). (Feb 2019)
+
+ - A post on [https://stackoverflow.com/questions/39436713/r-shiny-reactivevalues-vs-reactive the difference between reactive and reactiveValues] in Shiny (Feb 2019).
+
+ - [https://github.com/yihui/printr printr (prints help pages with knitr)]
+ 
+ - [https://www.stat.ubc.ca/~jenny/STAT545A/topic10_tablesCSS.html Fixing the annoying Rmarkdown table width default]
+
+
+== Stats
+
+ - The OLS solution can be written as a weighted average of all n-choose-(p\+1) slopes defined by all subsets of (p\+1) data points that form a plane. See [https://academic.oup.com/biomet/article/75/4/779/423143 a theorem of Jacobi and its generalization
+by Mark Berman (1988)]. (I got it from [http://faculty.washington.edu/kenrice/index.html Ken Rice]'s BIOST 571 notes, Nov 2019)
+
+ - The ridge solution can be written as a weighted average of 2^p regression coefficients on all possible subsets of variables. See [https://www.jstor.org/stable/2984832?seq=1 Leamer and Chaimberlain (1976)]. (Nov 2019)
+
+ - A [./prob_puzzle2.html brainteaser] that I couldn't solve during an interview. Not really stats-related. (Oct 2019)
+
+ - Don't use [https://en.wikipedia.org/wiki/Receiver_operating_characteristic AUROC] when evaluating the predictive performance for rare events. The [https://en.wikipedia.org/wiki/Precision_and_recall precision-recall curve] handles multiple testing (through FDR) and better reflects the difficulty of the problem. 
+   See also, a [https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/ post] by [https://machinelearningmastery.com/about/ Jason Brownlee]. (Jul 2019)
+
+ - [https://timvieira.github.io/blog/post/2014/08/01/gumbel-max-trick-and-weighted-reservoir-sampling/ A sampling trick on data streams]. (May 2019)
+
+ - A [./prob_puzzle.nb.html probability puzzle] that I couldn't solve during an interview. (Dec 2018)
+
+ - My second favorite statistical head-scratcher (after [https://en.wikipedia.org/wiki/Stein%27s_example Stein's paradox]) is [./thresholding_paradox.nb.html the sub-optimality of thresholding procedures] (partly because we found it). (Nov 2018)
+
+ - There is ("as there ought to be") a [https://stats.stackexchange.com/questions/81395/relationship-between-ridge-regression-and-pca-regression connection between ridge regression and principal component regression]. See also, the [https://www.tandfonline.com/doi/abs/10.1080/01621459.1977.10479910 "57 varieties" paper] by Dempster et al..
+
+ - [https://terrytao.wordpress.com/category/teaching/254a-random-matrices/ Terence Tao's notes on random matrices]
+
+ - The Alternating Conditional Expectation algorithm proposed in [https://pdfs.semanticscholar.org/e1ee/012f12793b4021352bb953f2fe9a40c33cf2.pdf Breiman and Friedman (1985)]. See a quick [./ACE.nb.html replicate of the first example]. I am surprised that I have never heard of it until now. (Feb 2018)
+
+ - [https://arxiv.org/pdf/1405.0680.pdf A useful variant of the Davis–Kahan theorem for statisticians] which bounds the distances between subspaces spaned by eigenvectors of a perturbed covariance matrix and the its counterpart of the uncontaminated one. Related is a [./subspace_dist.html variational characterization of distances between subspaces].
+
+ - An iterative method for [./steifel_notes.pdf Optimization on Stiefel manifolds] by [http://noodle.med.yale.edu/hdtag/notes.html Hemant D. Tagare]. This method happens to fail when optimizating tr(XX'S) over X in the Steifel manifold when S is real symmetric (which is a common problem is statistics). See this [https://arxiv.org/pdf/1511.03688.pdf review paper] for a comparison of procedures for eigen-problems on data streams. One of the ideas is based on [http://link.springer.com/article/10.1007/BF01396012 rank-one modification of the symmetric eigen-problem].
+
+ - [./tree_distance_metric.html Some thoughts on trees and distance metrics]. You can recover the tree structure from the distance matrix of its nodes. (see [./tree_distance_matrix.html an R script])
+
+ - You cannot arbitrarily design full conditional distributions and expect them to be compatible (only when they are compatible can you use Brook's lemma). I was suprised how this is glossed over by many people. ([./incompatible_full_conditionals.html numerical example], [https://www.jstor.org/stable/2289858 theory])
+
+ - There is little reason to unconditionally favor [https://en.wikipedia.org/wiki/Fisher's_method Fisher's method] (sum of negative log p-values) over, say, Edginton's Method (sum of p-values) for combining p-values (although it is better known that Fisher's method and Bonferroni's method are good at picking out different alternatives). In some cases of small and distributed effects, the latter wins; see [./combine_p-values.html numerical example], [./Liptak_1958.pdf theory]. In particular, Edginton's Method is optimal when the p-values under the alternative are truncated exponentials.
+
+ - Don't include both log(x) and log^2(x) in your linear model; see [https://stats.stackexchange.com/questions/312662/multicollinearity-between-lnx-and-lnx2 this post].
+
+# - An elegant derivation of [https://math.stackexchange.com/questions/1456567/expected-maximum-absolute-value-of-n-iid-standard-gaussians an upper bound of the expectated maximum absolute value of i.i.d. Gaussian random variables] by [http://probability.univ.kiev.ua/index.php?page=userinfo&person=zhoraster zhoraster].
+
+
+

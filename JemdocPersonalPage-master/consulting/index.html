@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="../jemdoc.css" type="text/css" />
+<title>CSCAR</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="menu-item"><a href="../index.html">Main</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="../research/index.html">Papers</a></div>
+<div class="menu-item"><a href="../trivia/index.html">Trivia</a></div>
+<div class="menu-item"><a href="../software/index.html">Software</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="../consulting/index.html" class="current">Consulting</a></div>
+<div class="menu-item"><a href="../teaching/index.html">Teaching</a></div>
+<div class="menu-item"><a href="../personal/index.html">Personal</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>CSCAR</h1>
+</div>
+<p>You can seek help from <a href="http://cscar.research.umich.edu/">Consulting for Statistics, Computing and Analytics Research (CSCAR)</a></p>
+<h1>FAQ</h1>
+<ul>
+<li><p>Longitudinal study / mixed effects modeling / correlated error / repeated measurements in R: <a href="https://cran.r-project.org/web/packages/lme4/">lme4::lmer</a>, <a href="https://cran.r-project.org/web/packages/lme4/">lme4::glmer</a>, <a href="https://cran.r-project.org/web/packages/lmerTest/index.html">lmerTest::</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Multiple tests / post-hoc tests in R / Tukey's test in ANOVA, ANCOVA): <a href="https://www.rdocumentation.org/packages/stats/versions/3.4.3/topics/TukeyHSD">stats::TukeyHSD</a>, <a href="https://cran.r-project.org/web/packages/multcomp/">multcomp::glht</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Post-hoc test in mixed-effects models: <a href="https://cran.r-project.org/web/packages/lsmeans/vignettes/using-lsmeans.pdf">lsmeans:lsmeans</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Change reference category of a factor in R: <a href="https://www.rdocumentation.org/packages/stats/versions/3.4.3/topics/relevel">stats::relevel</a></p>
+</li>
+</ul>
+<h1>Miscellaneous </h1>
+<p>Some small side projects from clients</p>
+<ul>
+<li><p>Automating nurse workload balancing at U of Michigan Hospital. 
+For 3 shifts a day nurses will be assigned patients to care for; each patient carries an expected workload calculated by his conditions and treatment. Nurses working the same shift (except those who straddle two hospital wings, and/or work multiple shifts) are expected to have similar workload. See example data files (<a href="./patient-nurse_assignment/NurseAssignments-Mar6-day.xlsx">work schedule</a>, <a href="./patient-nurse_assignment/NurseInfo.xlsx">nurse info</a>) and <a href="./patient-nurse_assignment/patient_assignment.R">R-script</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Sending POST reqests, parsing JSON responses, and formating data (from the LobbyView database) using R (<a href="./LobbyView_POST_request/lobbyview_data_retrieval.R">script</a>), and Python (<a href="./LobbyView_POST_request/lobbyview_data_retrieval.py">script</a>).</p>
+</li>
+</ul>
+<ul>
+<li><p>A small tool for finding most time-slots coverage using gathered responses from Google Forms, since Google Forms does not provide this function. See <a href="./most_time_coverage/SquashClubInitialFormMar6.xlsx">example data file</a> and <a href="./most_time_coverage/getPracticeTimes.R">script</a></p>
+</li>
+</ul>
+<h1>Bugs</h1>
+<ul>
+<li><p>If you ever see an error like the following when installing a package in R, it's because the list of packages on the RStudio mirror is not well-maintained. A newer version is available for download but the list is apparantly outdated. Just use another mirror.</p>
+</li>
+</ul>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+trying URL 'https://cran.rstudio.com/src/contrib/pillar_1.1.0.tar.gz'
+Warning in install.packages :
+  cannot open URL 'https://cran.rstudio.com/src/contrib/pillar_1.1.0.tar.gz':
+ HTTP status was '404 Not Found'
+</pre></div></div>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-06-09 17:48:51 EDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
