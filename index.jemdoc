@@ -1,0 +1,29 @@
+# jemdoc: menu{MENU}{index.html}
+= Kai Wang
+
+~~~
+{}{img_left}{kai1.jpg}{alt text}{175px}{230px}{}
+Kai Wang [kai_cv.pdf \[ CV \]]\n
+Master's Student \n 
+[http://sist.shanghaitech.edu.cn/ School of Information Science and Technology] \n
+[http://www.shanghaitech.edu.cn/ ShanghaiTech University]  \n
+
+Advisor: [http://faculty.sist.shanghaitech.edu.cn/faculty/boris/index.html Boris Houska]
+~~~
+
+== Contact
+Kai Wang\n
+ShanghaiTech University\n
+SIST Building, Room 1D-204,\n
+393 Huaxia Middle Road,\n
+201210 Shanghai, China.\n
+wangkai1@shanghaitech.edu.cn 
+== Research Interests 
+- Robust Model Predictive Control 
+- Distributed Optimization
+- Set Based Computing 
+== Education 
+- M.E., Computer Science, School of Information Science and Technology, ShanghaiTech University, 2017 - 2020 (expccted)
+- B.E., Space Information and Digital Technology, Xi Dian University, 2013-2017   
+
+

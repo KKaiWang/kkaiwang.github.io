@@ -1,0 +1,6 @@
+# jemdoc: menu{MENU}{talks.html}
+= Presentations
+
+- K. Wang.\n
+Parallel explicit tube model predictive control. \[[papers/CDC2019_slides.pdf Slides]\] \n
+58th IEEE Conference on Decision and Control (CDC), Nice, France, December 13, 2019.
