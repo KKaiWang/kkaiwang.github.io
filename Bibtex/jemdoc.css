@@ -4,7 +4,18 @@ table#tlayout {
     border: none;
     border-collapse: separate;
     background: white;
+	margin-right: auto;
+	margin-left: 0px;
+	text-align:left;
+	width: auto;
+    margin-right: 0px;
 }
+
+#courses { background: white;
+	 	   text-align: left;}
+
+#courses tr.r1 { font-weight: bold; }
+#courses tr.c1 { font-weight: bold; }
 
 body {
 	background: white;
@@ -32,9 +43,10 @@ body {
 }
 
 #layout-content {
-	padding-top: 0.0em;
-	padding-left: 1.0em;
-	padding-right: 1.0em;
+	padding-top: 1.0em;
+	padding-left: 2.0em;
+	padding-right: 2.0em;
+	width: 42em;
     border: none;
     background: white;
     text-align: left;
@@ -340,11 +352,16 @@ table {
     border-collapse: collapse;
 }
 
+
+th {
+    text-align: left;
+}
+
 td {
     padding: 2px;
-    padding-left: 0.5em;
+    padding-left: 1.0em;
     padding-right: 0.5em;
-    text-align: center;
+    text-align: left;
     border: 1px solid gray;
 }
 
