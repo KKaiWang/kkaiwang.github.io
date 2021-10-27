@@ -1,9 +1,0 @@
-# jemdoc: menu{MENU}{talks.html}
-# jemdoc: notime
-= Presentations
-
-- Kai Wang.\n
-Parallel explicit tube model predictive control. \[[papers/CDC2019_slides.pdf Slides]\] \n
-58th CDC conference, Nice, France, December 13, 2019.
-
-
