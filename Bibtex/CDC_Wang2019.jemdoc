@@ -1,0 +1,11 @@
+# jemdoc: notime
+
+~~~
+@INPROCEEDINGS{Wang2019,\n
+author = {Wang, K. and Jiang, Y. and Oravec, J. and Villanueva, M.E. and Houska, B.},\n
+title = {Parallel explicit tube model predictive control},\n
+booktitle = {Proceedings of the 58th IEEE Conference on Decision and Control},\n
+year = {2019},\n
+pages = {7696-7701},\n
+}
+~~~
