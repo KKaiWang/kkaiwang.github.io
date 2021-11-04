@@ -4,7 +4,7 @@
 @INPROCEEDINGS{Wang2021,\n
 author = {Wang, K. and Gros, S.},\n
 title = {Recursive Feasibility of Stochastic Model Predictive Control with Mission-Wide Probabilistic Constraints},\n
-booktitle = {Proceedings of the 60th IEEE Conference on Decision and Control},\n
+booktitle = {Proceedings of the 60th IEEE Conference on Decision and Control (CDC), Austin, Texas, USA},\n
 year = {2021}\n
 }
 ~~~
