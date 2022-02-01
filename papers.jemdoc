@@ -4,8 +4,7 @@
 
 
 == 2021
-- K. Wang, S. Gros.\n
-Solving mission-wide chance-constrained optimal control using dynamic programming. (Submitted)
+
 
 - K. Wang, S. Gros.\n
 [https://arxiv.org/abs/2110.04570 Recursive feasibility of stochastic model predictive control with mission-wide probabilistic constraints.] \[[papers/CDC2021_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2021.html Bibtex]\]\n
