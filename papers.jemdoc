@@ -3,6 +3,19 @@
 = Papers
 
 
+
+
+
+== 2022
+
+
+- K. Wang, S. Gros.\n
+[https://arxiv.org/abs/2209.05979 Solving mission-wide chance-constrained optimal control using dynamic programming.] \[[papers/CDC2022_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2022.html Bibtex]\]\n
+In Proceedings of the 61th IEEE Conference on Decision and Control (CDC), Cancun, Mexico, December, 2022.
+
+
+
+
 == 2021
 
 
@@ -12,7 +25,7 @@ In Proceedings of the 60th IEEE Conference on Decision and Control (CDC), Austin
 
 
 == 2019
-- K. Wang, Y. Jiang, J. Oravec, M.E. Villanueva, B. Houska.\n
+- K. Wang, J. Oravec, M.E. Villanueva, B. Houska.\n
 [papers/CDC2019.pdf Parallel explicit tube model predictive control.] \[[papers/CDC2019_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2019.html Bibtex]\]\n
 In Proceedings of the 58th IEEE Conference on Decision and Control (CDC), Nice, France, December, 2019.
 

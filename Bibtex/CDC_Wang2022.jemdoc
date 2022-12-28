@@ -1,0 +1,10 @@
+# jemdoc: notime
+
+~~~
+@INPROCEEDINGS{Wang2022,\n
+author = {Wang, K. and Gros, S.},\n
+title = {Solving Mission-Wide Chance-Constrained Optimal Control Using Dynamic Programming},\n
+booktitle = {Proceedings of the 61th IEEE Conference on Decision and Control (CDC), Cancun, Mexico},\n
+year = {2022}\n
+}
+~~~
