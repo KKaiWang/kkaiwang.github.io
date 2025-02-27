@@ -1,0 +1,13 @@
+# jemdoc: notime
+
+~~~
+@INPROCEEDINGS{Wang2024,\n
+  author={Wang, Kai and Hoang, Kiet Tuan and Gros, Sebastien},\n
+  booktitle={IEEE 63rd Conference on Decision and Control (CDC)},\n 
+  title={Robustifying Model Predictive Control of Uncertain Linear Systems with Chance Constraints},\n 
+  year={2024},\n
+  volume={},\n
+  number={},\n
+  pages={3650-3655}\n
+}
+~~~

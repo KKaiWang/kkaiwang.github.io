@@ -1,0 +1,11 @@
+# jemdoc: notime
+
+~~~
+@PHDTHESIS{Wang2024,\n
+author = {K. Wang},\n
+title = {Model-Based Predictive Control Under Uncertainty},\n
+school = {Norwegian University of Science and Technology (NTNU)},\n
+year = {2024},\n
+isbn = {978-82-326-8426-7}\n
+}
+~~~

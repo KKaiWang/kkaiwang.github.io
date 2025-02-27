@@ -1,0 +1,13 @@
+# jemdoc: notime
+
+~~~
+@ARTICLE{Wang2024,\n
+  author={Wang, K. and Zhang, S. and Gros, S. and Rakovic, S. V.},\n
+  journal={IEEE Transactions on Automatic Control}, \n
+  title={Tube MPC With Time-Varying Cross-Sections}, \n
+  year={2024},\n
+  volume={},\n
+  number={},\n
+  pages={1-8}\n
+}
+~~~

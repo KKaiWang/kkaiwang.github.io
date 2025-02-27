@@ -3,14 +3,35 @@
 = Papers
 
 
+== Submitted Papers
 
+
+- K. Wang, J. Liu, Y. Yan, W. Chen.\n
+Model Predictive Control with $\lambda$-Contractive Terminal Sets\n
+Automatica, 2025. 
+
+
+== 2024
+
+
+- K. Wang, S. Zhang, S. Gros, S. V. Rakovic.\n
+[https://ieeexplore.ieee.org/abstract/document/10694700 Tube MPC with Time-varying Cross-Sections.] \[[papers/TAC2024.pdf paper]\] \[[Bibtex\TAC2024.html Bibtex]\]\n
+IEEE Transactions on Automatic Control, 2024
+
+- K. Wang, K.T. Hoang, S. Gros\n
+[https://ieeexplore.ieee.org/document/10886384 Robustifying Model Predictive Control of Uncertain Linear Systems with Chance Constraints.] \[[papers/CDC2024.pdf paper]\] \[[Bibtex\CDC2024.html Bibtex]\]\n
+In Proceedings of the 63th IEEE Conference on Decision and Control (CDC), Milan, Italy, December, 2024.
+
+- K. Wang\n
+[https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3161489 Model-Based Predictive Control Under Uncertainty.] \[[papers/Thesis.pdf paper]\] \[[Bibtex\Thesis.html Bibtex]\]\n
+Norwegian University of Science and Technology, October, 2024.
 
 
 == 2022
 
 
 - K. Wang, S. Gros.\n
-[https://arxiv.org/abs/2209.05979 Solving mission-wide chance-constrained optimal control using dynamic programming.] \[[papers/CDC2022_slides.pdf Slides]\] \[[Bibtex\CDC_Wang2022.html Bibtex]\]\n
+[https://arxiv.org/abs/2209.05979 Solving mission-wide chance-constrained optimal control using dynamic programming.]  \[[Bibtex\CDC_Wang2022.html Bibtex]\]\n
 In Proceedings of the 61th IEEE Conference on Decision and Control (CDC), Cancun, Mexico, December, 2022.
 
 
